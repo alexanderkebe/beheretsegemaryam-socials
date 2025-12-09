@@ -4,12 +4,14 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
+import { preloadImages, getAllImageUrls } from "@/lib/image-preloader"
 
 export default function DarkSplashPage() {
   const router = useRouter()
   const { language } = useLanguage()
   const t = translations[language]
   const [isVisible, setIsVisible] = useState(true)
+  const [imagesLoaded, setImagesLoaded] = useState(false)
 
   // Apply dark mode class on mount
   useEffect(() => {
@@ -19,14 +21,54 @@ export default function DarkSplashPage() {
     }
   }, [])
 
+  // Preload all images before showing splash screen
   useEffect(() => {
+    const loadImages = async () => {
+      try {
+        await preloadImages(getAllImageUrls())
+        setImagesLoaded(true)
+      } catch (error) {
+        // Even if preloading fails, show the splash screen
+        setImagesLoaded(true)
+      }
+    }
+
+    loadImages()
+  }, [])
+
+  useEffect(() => {
+    // Only start the timer after images are loaded
+    if (!imagesLoaded) return
+
     const timer = setTimeout(() => {
       setIsVisible(false)
       setTimeout(() => router.push("/dark/contact"), 300)
     }, 3000)
 
     return () => clearTimeout(timer)
-  }, [router])
+  }, [router, imagesLoaded])
+
+  // Show loading screen while images are loading
+  if (!imagesLoaded) {
+    return (
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="flex items-center justify-center gap-2">
+            <div className="w-3 h-3 bg-blue-300 rounded-full animate-pulse" />
+            <div
+              className="w-3 h-3 bg-purple-300 rounded-full animate-pulse"
+              style={{ animationDelay: "150ms" }}
+            />
+            <div
+              className="w-3 h-3 bg-pink-300 rounded-full animate-pulse"
+              style={{ animationDelay: "300ms" }}
+            />
+          </div>
+          <p className="text-sm text-gray-400 font-sans">Loading...</p>
+        </div>
+      </div>
+    )
+  }
 
   if (!isVisible) return null
 
