@@ -1,0 +1,20 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Golden Yellow Six-Pointed Star/Snowflake -->
+  <!-- Six rhombus shapes arranged radially around center -->
+  <g transform="translate(16,16)">
+    <!-- First rhombus (top) -->
+    <path d="M0,-8 L4,-4 L0,0 L-4,-4 Z" fill="#FFD700" stroke="white" stroke-width="0.3"/>
+    <!-- Second rhombus (top-right) -->
+    <path d="M4,-4 L8,0 L4,4 L0,0 Z" fill="#FFD700" stroke="white" stroke-width="0.3"/>
+    <!-- Third rhombus (bottom-right) -->
+    <path d="M8,0 L4,4 L0,8 L4,4 Z" fill="#FFD700" stroke="white" stroke-width="0.3"/>
+    <!-- Fourth rhombus (bottom) -->
+    <path d="M0,8 L-4,4 L0,0 L4,4 Z" fill="#FFD700" stroke="white" stroke-width="0.3"/>
+    <!-- Fifth rhombus (bottom-left) -->
+    <path d="M-4,4 L-8,0 L-4,-4 L0,0 Z" fill="#FFD700" stroke="white" stroke-width="0.3"/>
+    <!-- Sixth rhombus (top-left) -->
+    <path d="M-8,0 L-4,-4 L0,0 L-4,4 Z" fill="#FFD700" stroke="white" stroke-width="0.3"/>
+    <!-- Center hexagon (negative space from white lines) -->
+    <polygon points="-2,-2 2,-2 2,2 -2,2" fill="white" transform="rotate(45)"/>
+  </g>
+</svg>
