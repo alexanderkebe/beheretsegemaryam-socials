@@ -110,12 +110,9 @@ export default function DarkContactPage() {
           <div className="absolute inset-0 bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/10" />
           <blockquote className="relative z-10 px-6 py-6 sm:px-8 sm:py-8 text-center">
             <p className="text-base sm:text-lg leading-relaxed font-semibold text-gray-100 dark:text-gray-100">
-              ዘአፍቀራ ለቤተ ክርስቲያን ኢይጻሙ፤ ወተሐቅፎ ከመ እሙ፣ ወተዐብዮ እምነ ቢጹ፣ ወትሴስዮ እክለ ጥበብ ወአእምሮ፣ ወታስትዮ ወይነ ትፍሥሕት ዘበአእምሮ፤ ወታስተቄጽሎ አክሊለ ትፍሥሕት ወሐሤት
+              "{t.scripture}"
             </p>
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-gray-300 dark:text-gray-300">
-              ቤተ ክርስቲያንን የወደዳት መንፈሰ ደካማ አይሆንም፡፡ እንደ እናት ታቅፈዋለች፤ ከጓደኛውም የላቀ ታደርገዋለች፤ የዕውቀትና ጥበብ ምግብን ትመግበዋለች፣ በዕውቀት የሚገኝ የደስታ ወይንንም ታጠጣዋለች፣ የደስታ አክሊልንም ታቀዳጀዋለች፡፡
-            </p>
-            <footer className="mt-4 text-sm font-medium text-gray-400 dark:text-gray-400">/ጾመ ደጓ/</footer>
+            <footer className="mt-4 text-sm font-medium text-gray-400 dark:text-gray-400">{t.bibleReference}</footer>
           </blockquote>
         </div>
       </div>
