@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import ActionCardDark from "@/components/action-card-dark"
+import ShareCard from "@/components/share-card"
 import ToastDark from "@/components/toast-dark"
 import { LanguageSwitcherDark } from "@/components/language-switcher-dark"
 import { useLanguage } from "@/lib/language-context"
@@ -118,6 +119,9 @@ export default function DarkContactPage() {
       </div>
 
       <div className="max-w-2xl mx-auto space-y-6 sm:space-y-8">
+        {/* Share & Win */}
+        <ShareCard t={t} onToast={showToast} />
+
         {/* Contact Section */}
         <section className="space-y-3 sm:space-y-4">
           <h2 className="text-lg font-bold text-gray-100 dark:text-gray-100 px-4">{t.contact}</h2>
