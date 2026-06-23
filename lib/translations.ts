@@ -49,8 +49,8 @@ export const translations = {
     facebookCopied: "Facebook copied!",
     linkedinCopied: "LinkedIn copied!",
     scriptureTitle: "Join the Cause",
-    scripture: "For I was hungry and you gave me something to eat.",
-    bibleReference: "— Matthew 25:35",
+    scripture: "For where two or three gather in my name, there am I with them.",
+    bibleReference: "— Matthew 18:20",
     redirecting: "Redirecting...",
   },
   am: {
@@ -102,8 +102,8 @@ export const translations = {
     facebookCopied: "ፌስቡክ ተቀድቷል!",
     linkedinCopied: "ሊንክድ-ኢን ተቀድቷል!",
     scriptureTitle: "ዘመቻውን ይቀላቀሉ",
-    scripture: "ተርቤ ነበርና አበላችሁኝ።",
-    bibleReference: "— ማቴዎስ 25:35",
+    scripture: "ሁለት ወይም ሦስት በስሜ በሚሰበሰቡበት በዚያ በመካከላቸው እሆናለሁ።",
+    bibleReference: "— ማቴዎስ 18:20",
     redirecting: "በማዞር ላይ...",
   },
 }
