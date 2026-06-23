@@ -18,28 +18,14 @@ const benaiah = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Feed the Hungry - Join the Cause",
+  title: "Mekane Selam Behere Tsege St. Mary's Official Media",
   description:
-    "Support our mission to feed the hungry. Contact us, follow us on social media, or donate through our banking partners.",
+    "Official media of Mekane Selam Behere Tsege St. Mary's Church. Connect with us on Telegram, TikTok, Instagram, YouTube, Facebook, and LinkedIn.",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.svg",
-        media: "(prefers-color-scheme: light)",
-        type: "image/svg+xml",
-      },
-      {
-        url: "/icon-dark-32x32.svg",
-        media: "(prefers-color-scheme: dark)",
-        type: "image/svg+xml",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.svg",
+    icon: "/images/profile-picture.png",
+    shortcut: "/images/profile-picture.png",
+    apple: "/images/profile-picture.png",
   },
 }
 
