@@ -74,13 +74,13 @@ export default function SplashPage() {
 
           {/* Content */}
           <div className="relative z-10 py-12 sm:py-16 px-6 sm:px-8 space-y-8">
-            {/* Centerpiece Icon - Good Shepherd */}
+            {/* Centerpiece - Profile Picture */}
             <div className="flex justify-center mb-6">
               <div className="relative">
-                <img 
-                  src="/images/good sheperd.png" 
-                  alt="Good Shepherd" 
-                  className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain drop-shadow-2xl"
+                <img
+                  src="/images/profile-picture.png"
+                  alt="Behere Tsege Mariam"
+                  className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-full ring-4 ring-white/40 dark:ring-white/20 shadow-2xl"
                 />
               </div>
             </div>
@@ -88,8 +88,9 @@ export default function SplashPage() {
             {/* Title - using Montserrat font, matching Contact Page header */}
             <div className="space-y-2">
               <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent font-sans">
-                {t.joinCause} — #FeedTheHungry
+                {t.joinCause}
               </h1>
+              <p className="text-sm sm:text-base font-semibold text-gray-600 dark:text-gray-400">{t.feedTheHungry}</p>
             </div>
 
             {/* Divider */}

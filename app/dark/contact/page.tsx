@@ -28,12 +28,12 @@ export default function DarkContactPage() {
   }
 
   const handlePhoneCall = () => {
-    window.location.href = "tel:+251971829292"
+    window.location.href = "tel:+251959172939"
     showToast("Initiating call...", "info")
   }
 
   const handlePhoneSMS = () => {
-    const phoneNumber = "+251971829292"
+    const phoneNumber = "+251959172939"
     // Remove any spaces or special characters except +
     const cleanNumber = phoneNumber.replace(/[^\d+]/g, "")
     
@@ -59,12 +59,12 @@ export default function DarkContactPage() {
   }
 
   const handleEmailWrite = () => {
-    window.location.href = "mailto:contact@feedthehungry.com"
+    window.location.href = "mailto:beheretsegemariam@gmail.com"
     showToast("Opening email...", "info")
   }
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("contact@feedthehungry.com")
+    navigator.clipboard.writeText("beheretsegemariam@gmail.com")
     showToast("Email copied!", "success")
   }
 
@@ -76,15 +76,6 @@ export default function DarkContactPage() {
   const handleCopyText = (text: string, label: string) => {
     navigator.clipboard.writeText(text)
     showToast(`${label} copied!`, "success")
-  }
-
-  const handleCopyBankInfo = (account: string, holder: string) => {
-    navigator.clipboard.writeText(account)
-    showToast(`✓ ${holder}`, "success")
-  }
-
-  const handleShowBankDetails = (bankName: string, holder: string, account: string) => {
-    showToast(`${bankName}: ${holder}`, "info")
   }
 
   return (
@@ -99,12 +90,12 @@ export default function DarkContactPage() {
 
           {/* Header content */}
           <div className="relative z-10 text-center py-8 sm:py-10 px-4">
-            {/* Good Shepherd Icon */}
+            {/* Profile Picture */}
             <div className="flex justify-center mb-4">
-              <img 
-                src="/images/good sheperd.png" 
-                alt="Good Shepherd" 
-                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain drop-shadow-2xl"
+              <img
+                src="/images/profile-picture.png"
+                alt="Behere Tsege Mariam"
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-full ring-4 ring-white/20 shadow-2xl"
               />
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent mb-2 animate-slide-in-right">
@@ -112,6 +103,20 @@ export default function DarkContactPage() {
             </h1>
             <p className="text-lg sm:text-xl font-semibold text-gray-400 dark:text-gray-400">{t.feedTheHungry}</p>
           </div>
+        </div>
+
+        {/* Quote */}
+        <div className="relative rounded-2xl overflow-hidden">
+          <div className="absolute inset-0 bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/10" />
+          <blockquote className="relative z-10 px-6 py-6 sm:px-8 sm:py-8 text-center">
+            <p className="text-base sm:text-lg leading-relaxed font-semibold text-gray-100 dark:text-gray-100">
+              ዘአፍቀራ ለቤተ ክርስቲያን ኢይጻሙ፤ ወተሐቅፎ ከመ እሙ፣ ወተዐብዮ እምነ ቢጹ፣ ወትሴስዮ እክለ ጥበብ ወአእምሮ፣ ወታስትዮ ወይነ ትፍሥሕት ዘበአእምሮ፤ ወታስተቄጽሎ አክሊለ ትፍሥሕት ወሐሤት
+            </p>
+            <p className="mt-4 text-sm sm:text-base leading-relaxed text-gray-300 dark:text-gray-300">
+              ቤተ ክርስቲያንን የወደዳት መንፈሰ ደካማ አይሆንም፡፡ እንደ እናት ታቅፈዋለች፤ ከጓደኛውም የላቀ ታደርገዋለች፤ የዕውቀትና ጥበብ ምግብን ትመግበዋለች፣ በዕውቀት የሚገኝ የደስታ ወይንንም ታጠጣዋለች፣ የደስታ አክሊልንም ታቀዳጀዋለች፡፡
+            </p>
+            <footer className="mt-4 text-sm font-medium text-gray-400 dark:text-gray-400">/ጾመ ደጓ/</footer>
+          </blockquote>
         </div>
       </div>
 
@@ -123,7 +128,7 @@ export default function DarkContactPage() {
           <ActionCardDark
             icon={<Phone className="w-6 h-6 text-green-400" />}
             title={t.phone}
-            subtitle="+251 971 829 292"
+            subtitle="+251 959 172 939"
             primaryLabel={t.call}
             secondaryLabel={t.text}
             primaryGlow="bg-gradient-to-r from-green-400 to-emerald-500"
@@ -135,7 +140,7 @@ export default function DarkContactPage() {
           <ActionCardDark
             icon={<Mail className="w-6 h-6 text-blue-400" />}
             title={t.email}
-            subtitle="contact@feedthehungry.com"
+            subtitle="beheretsegemariam@gmail.com"
             primaryLabel={t.write}
             secondaryLabel={t.copy}
             primaryGlow="bg-gradient-to-r from-blue-400 to-blue-500"
@@ -149,137 +154,121 @@ export default function DarkContactPage() {
         <section className="space-y-3 sm:space-y-4">
           <h2 className="text-lg font-bold text-gray-100 dark:text-gray-100 px-4">{t.followUs}</h2>
 
+          {/* Telegram Channel */}
           <ActionCardDark
             icon={<img src="/images/telegram-20-284-29.png" alt={t.telegram} className="w-6 h-6" />}
-            title={t.telegram}
-            subtitle="Feed the Hungry"
-            primaryLabel={t.openProfile}
-            secondaryLabel={t.copyName}
+            title={`${t.telegram} ${t.channel}`}
+            subtitle="@Behere_tsege_mariam"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
             primaryGlow="bg-gradient-to-r from-cyan-400 to-blue-500"
             secondaryGlow="bg-gradient-to-r from-cyan-300 to-cyan-500"
-            onPrimary={() => handleSocialLink("https://t.me/feedthehungry")}
-            onSecondary={() => handleCopyText("feedthehungry", t.telegramCopied)}
+            onPrimary={() => handleSocialLink("https://t.me/Behere_tsege_mariam")}
+            onSecondary={() => handleCopyText("https://t.me/Behere_tsege_mariam", t.linkCopied)}
           />
 
+          {/* Telegram Account */}
+          <ActionCardDark
+            icon={<img src="/images/telegram-20-284-29.png" alt={t.telegram} className="w-6 h-6" />}
+            title={`${t.telegram} ${t.account}`}
+            subtitle="@Beheretsegemariam"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
+            primaryGlow="bg-gradient-to-r from-cyan-400 to-blue-500"
+            secondaryGlow="bg-gradient-to-r from-cyan-300 to-cyan-500"
+            onPrimary={() => handleSocialLink("https://t.me/Beheretsegemariam")}
+            onSecondary={() => handleCopyText("https://t.me/Beheretsegemariam", t.linkCopied)}
+          />
+
+          {/* Telegram Group */}
+          <ActionCardDark
+            icon={<img src="/images/telegram-20-284-29.png" alt={t.telegram} className="w-6 h-6" />}
+            title={`${t.telegram} ${t.group}`}
+            subtitle={t.inviteLink}
+            primaryLabel={t.join}
+            secondaryLabel={t.copyLink}
+            primaryGlow="bg-gradient-to-r from-cyan-400 to-blue-500"
+            secondaryGlow="bg-gradient-to-r from-cyan-300 to-cyan-500"
+            onPrimary={() => handleSocialLink("https://t.me/+fmrtZ3AUgMAyN2Q0")}
+            onSecondary={() => handleCopyText("https://t.me/+fmrtZ3AUgMAyN2Q0", t.linkCopied)}
+          />
+
+          {/* TikTok */}
           <ActionCardDark
             icon={<img src="/images/tik-tok-20-281-29.png" alt={t.tiktok} className="w-6 h-6" />}
             title={t.tiktok}
-            subtitle="Feed the Hungry"
-            primaryLabel={t.openProfile}
-            secondaryLabel={t.copyName}
+            subtitle="@beheretsegemariam"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
             primaryGlow="bg-gradient-to-r from-gray-200 to-white dark:from-gray-200 dark:to-white"
             secondaryGlow="bg-gradient-to-r from-gray-300 to-gray-200"
-            onPrimary={() => handleSocialLink("https://www.tiktok.com/@feedthehungry")}
-            onSecondary={() => handleCopyText("feedthehungry", t.tiktokCopied)}
+            onPrimary={() => handleSocialLink("https://www.tiktok.com/@beheretsegemariam")}
+            onSecondary={() => handleCopyText("https://www.tiktok.com/@beheretsegemariam", t.linkCopied)}
           />
 
+          {/* Instagram */}
           <ActionCardDark
             icon={<img src="/images/instagram-20-284-29.png" alt={t.instagram} className="w-6 h-6" />}
             title={t.instagram}
-            subtitle="Feed the Hungry"
-            primaryLabel={t.openProfile}
-            secondaryLabel={t.copyName}
+            subtitle="@behere_tsege_mariam_official"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
             primaryGlow="bg-gradient-to-r from-pink-400 via-purple-500 to-orange-400"
             secondaryGlow="bg-gradient-to-r from-pink-300 to-orange-300"
-            onPrimary={() => handleSocialLink("https://www.instagram.com/feedthehungry")}
-            onSecondary={() => handleCopyText("feedthehungry", t.instagramCopied)}
+            onPrimary={() => handleSocialLink("https://www.instagram.com/behere_tsege_mariam_official/?hl=en")}
+            onSecondary={() => handleCopyText("https://www.instagram.com/behere_tsege_mariam_official/", t.linkCopied)}
           />
 
+          {/* YouTube */}
           <ActionCardDark
             icon={<img src="/images/youtube.png" alt={t.youtube} className="w-6 h-6" />}
-            title={t.youtube}
-            subtitle="Feed the Hungry"
-            primaryLabel={t.openProfile}
-            secondaryLabel={t.copyName}
+            title={`${t.youtube} ${t.channel}`}
+            subtitle="Behere Tsege Mariam"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
             primaryGlow="bg-gradient-to-r from-red-400 to-red-600"
             secondaryGlow="bg-gradient-to-r from-red-300 to-red-500"
-            onPrimary={() => handleSocialLink("https://www.youtube.com/@feedthehungry")}
-            onSecondary={() => handleCopyText("feedthehungry", t.youtubeCopied)}
+            onPrimary={() => handleSocialLink("https://www.youtube.com/@%E1%89%A5%E1%88%94%E1%88%A8%E1%8C%BD%E1%8C%8C%E1%88%9B%E1%88%AD%E1%8B%AB%E1%88%9D")}
+            onSecondary={() => handleCopyText("https://www.youtube.com/@%E1%89%A5%E1%88%94%E1%88%A8%E1%8C%BD%E1%8C%8C%E1%88%9B%E1%88%AD%E1%8B%AB%E1%88%9D", t.linkCopied)}
           />
 
+          {/* Facebook Page */}
           <ActionCardDark
             icon={<img src="/images/facebook.png" alt={t.facebook} className="w-6 h-6" />}
-            title={t.facebook}
-            subtitle="Feed the Hungry"
-            primaryLabel={t.openProfile}
-            secondaryLabel={t.copyName}
+            title={`${t.facebook} ${t.page}`}
+            subtitle="Behere Tsege Mariam"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
             primaryGlow="bg-gradient-to-r from-blue-600 to-blue-700"
             secondaryGlow="bg-gradient-to-r from-blue-500 to-blue-600"
-            onPrimary={() => handleSocialLink("https://www.facebook.com/feedthehungry")}
-            onSecondary={() => handleCopyText("feedthehungry", t.facebookCopied)}
+            onPrimary={() => handleSocialLink("https://www.facebook.com/share/193s3WT2Fz/")}
+            onSecondary={() => handleCopyText("https://www.facebook.com/share/193s3WT2Fz/", t.linkCopied)}
           />
 
+          {/* LinkedIn Profile */}
           <ActionCardDark
             icon={<img src="/images/linkedin-20-281-29.png" alt={t.linkedin} className="w-6 h-6" />}
-            title={t.linkedin}
-            subtitle="Feed the Hungry"
-            primaryLabel={t.openProfile}
-            secondaryLabel={t.copyName}
+            title={`${t.linkedin} ${t.profile}`}
+            subtitle="Behere Tsege Mariam"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
             primaryGlow="bg-gradient-to-r from-blue-500 to-blue-700"
             secondaryGlow="bg-gradient-to-r from-blue-400 to-blue-600"
-            onPrimary={() => handleSocialLink("https://www.linkedin.com/company/feedthehungry")}
-            onSecondary={() => handleCopyText("feedthehungry", t.linkedinCopied)}
-          />
-        </section>
-
-        {/* Banking Section */}
-        <section className="space-y-3 sm:space-y-4">
-          <h2 className="text-lg font-bold text-gray-100 dark:text-gray-100 px-4">{t.supportUs}</h2>
-
-          <ActionCardDark
-            icon={<img src="/images/cbe.png" alt={t.cbe} className="w-6 h-6" />}
-            title={t.cbe}
-            subtitle="1000734002399"
-            primaryLabel={t.copyAccount}
-            secondaryLabel={t.viewDetails}
-            primaryGlow="bg-gradient-to-r from-purple-400 to-purple-600"
-            secondaryGlow="bg-gradient-to-r from-purple-300 to-purple-500"
-            onPrimary={() => handleCopyBankInfo("1000734002399", "CBE")}
-            onSecondary={() => handleShowBankDetails(t.cbe, "Kebede and Edlawit and Alazar", "1000734002399")}
+            onPrimary={() => handleSocialLink("https://www.linkedin.com/in/%E1%89%A5%E1%88%94%E1%88%A8-%E1%8C%BD%E1%8C%8C-%E1%88%9B%E1%88%AD%E1%8B%AB%E1%88%9D-28b418419/?skipRedirect=true")}
+            onSecondary={() => handleCopyText("https://www.linkedin.com/in/%E1%89%A5%E1%88%94%E1%88%A8-%E1%8C%BD%E1%8C%8C-%E1%88%9B%E1%88%AD%E1%8B%AB%E1%88%9D-28b418419/", t.linkCopied)}
           />
 
+          {/* LinkedIn Page (Church) */}
           <ActionCardDark
-            icon={<img src="/images/bank-20of-20abysiniya.png" alt={t.bankOfAbyssinia} className="w-6 h-6" />}
-            title={t.bankOfAbyssinia}
-            subtitle="245940483"
-            primaryLabel={t.copyAccount}
-            secondaryLabel={t.viewDetails}
-            primaryGlow="bg-gradient-to-r from-yellow-300 to-yellow-500"
-            secondaryGlow="bg-gradient-to-r from-yellow-200 to-yellow-400"
-            onPrimary={() => handleCopyBankInfo("245940483", "Abyssinia")}
-            onSecondary={() =>
-              handleShowBankDetails(
-                t.bankOfAbyssinia,
-                "Kebede Haile and Alazar Kebede and Edelawit Asheber",
-                "245940483",
-              )
-            }
-          />
-
-          <ActionCardDark
-            icon={<img src="/images/awash-international-bank.png" alt={t.awash} className="w-6 h-6" />}
-            title={t.awash}
-            subtitle="013200104439400"
-            primaryLabel={t.copyAccount}
-            secondaryLabel={t.viewDetails}
-            primaryGlow="bg-gradient-to-r from-orange-400 to-orange-600"
-            secondaryGlow="bg-gradient-to-r from-orange-300 to-amber-500"
-            onPrimary={() => handleCopyBankInfo("013200104439400", "Awash")}
-            onSecondary={() =>
-              handleShowBankDetails(t.awash, "Edelawit Asheber and Alazar Kebede and Kebede Haile", "013200104439400")
-            }
-          />
-
-          <ActionCardDark
-            icon={<img src="/images/telebir.png" alt={t.telebirr} className="w-6 h-6" />}
-            title={t.telebirr}
-            subtitle="0971829292"
-            primaryLabel={t.copyAccount}
-            secondaryLabel={t.viewDetails}
-            primaryGlow="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-500"
-            secondaryGlow="bg-gradient-to-r from-green-300 to-emerald-400"
-            onPrimary={() => handleCopyBankInfo("0971829292", "Telebirr")}
-            onSecondary={() => handleShowBankDetails(t.telebirr, "0971829292", "0971829292")}
+            icon={<img src="/images/linkedin-20-281-29.png" alt={t.linkedin} className="w-6 h-6" />}
+            title={`${t.linkedin} ${t.page}`}
+            subtitle="Behere Tsege Mariam Church"
+            primaryLabel={t.open}
+            secondaryLabel={t.copyLink}
+            primaryGlow="bg-gradient-to-r from-blue-500 to-blue-700"
+            secondaryGlow="bg-gradient-to-r from-blue-400 to-blue-600"
+            onPrimary={() => handleSocialLink("https://www.linkedin.com/company/behere-tsege-mariam-church")}
+            onSecondary={() => handleCopyText("https://www.linkedin.com/company/behere-tsege-mariam-church", t.linkCopied)}
           />
         </section>
       </div>

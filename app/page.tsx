@@ -26,12 +26,12 @@ export default function Page() {
   }
 
   const handlePhoneCall = () => {
-    window.location.href = "tel:+251971829292"
+    window.location.href = "tel:+251959172939"
     showToast("Initiating call...", "info")
   }
 
   const handlePhoneSMS = () => {
-    const phoneNumber = "+251971829292"
+    const phoneNumber = "+251959172939"
     // Remove any spaces or special characters except +
     const cleanNumber = phoneNumber.replace(/[^\d+]/g, "")
     
@@ -57,12 +57,12 @@ export default function Page() {
   }
 
   const handleEmailWrite = () => {
-    window.location.href = "mailto:contact@feedthehungry.com"
+    window.location.href = "mailto:beheretsegemariam@gmail.com"
     showToast("Opening email...", "info")
   }
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("contact@feedthehungry.com")
+    navigator.clipboard.writeText("beheretsegemariam@gmail.com")
     showToast("Email copied!", "success")
   }
 

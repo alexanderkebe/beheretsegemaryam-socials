@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Montserrat } from "next/font/google"
+import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import { LanguageProvider } from "@/lib/language-context"
 import "./globals.css"
@@ -8,6 +9,13 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _montserrat = Montserrat({ subsets: ["latin"] })
+
+// Custom Amharic font (applied to amharic text via [lang="am"] in globals.css)
+const benaiah = localFont({
+  src: "./fonts/Benaiah.ttf",
+  variable: "--font-benaiah",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Feed the Hungry - Join the Cause",
@@ -41,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="am" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -61,7 +69,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`${benaiah.variable} font-sans antialiased`}>
         <LanguageProvider>
           {children}
           <Analytics />

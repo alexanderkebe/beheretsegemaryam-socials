@@ -20,17 +20,13 @@ export function preloadImages(imageUrls: string[]): Promise<void> {
  */
 export function getAllImageUrls(): string[] {
   return [
-    "/images/good sheperd.png",
+    "/images/profile-picture.png",
     "/images/telegram-20-284-29.png",
     "/images/tik-tok-20-281-29.png",
     "/images/instagram-20-284-29.png",
     "/images/youtube.png",
     "/images/facebook.png",
     "/images/linkedin-20-281-29.png",
-    "/images/cbe.png",
-    "/images/bank-20of-20abysiniya.png",
-    "/images/awash-international-bank.png",
-    "/images/telebir.png",
   ]
 }
 

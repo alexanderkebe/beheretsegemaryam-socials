@@ -191,6 +191,14 @@
   }
 }
 
+/* Amharic font: when the language is set to Amharic (html[lang="am"]),
+   render text with the provided Benaiah font, falling back to the Latin
+   sans stack per-glyph for any non-Ethiopic characters (handles, URLs). */
+html[lang="am"] body,
+html[lang="am"] body * {
+  font-family: var(--font-benaiah), "Montserrat", "Geist", sans-serif;
+}
+
 /* Mobile/Touch-friendly animations */
 /* Show hover effects on touch devices when element is active or touched */
 @media (hover: none) and (pointer: coarse) {
